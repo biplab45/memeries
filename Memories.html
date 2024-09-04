@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #00b09b, #96c93d);
+            
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .photo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .photo-grid img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .photo-grid img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.8);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #caption {
+            margin: auto;
+            display: block;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+        
+        footer {
+            background: #222;
+            font-family: 'Times New Roman', Times, serif;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+   
+        @keyframes fadeInSlideZoom {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+.section img {
+    opacity: 0;
+    animation: fadeInSlideZoom 1.5s ease-in-out forwards;
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Memories</h1>
+        
+  
+        <div class="section" id="saraswati-puja">
+            <h2>Saraswati Puja</h2>
+            <div class="photo-grid">
+                <!-- Add up to 20 photos here -->
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.47.39_b783aa6f.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.47.26_cf083ac6.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.47.39_469d0b13.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.47.32_18801c1b.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.47.39_26a3fd89.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.47.40_22a36878.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.47.40_27440ea3.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.47.40_c8863d06.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.47.41_02eaad7c.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.47.41_d3a490a3.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.52.45_d242c663.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.52.45_e9e79783.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.52.46_30d8ca6c.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.52.46_dc9bad69.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.52.47_39929c9c.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.53.03_885b7ae9.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.57.03_0fc1ed75.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.57.03_2a107600.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.57.03_6dcce75b.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.57.04_690c3c1d.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 13.57.04_cd21320f.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 14.07.49_0a060a11.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 14.07.49_f7b22a14.jpg" class="lazy">
+                <img src="Photos/Saraswati Puja/WhatsApp Image 2024-09-04 at 14.07.50_cc2a6bd1.jpg" class="lazy">
+                <!-- Repeat for other photos -->
+            </div>
+        </div>
+        
+              
+        <div class="section" id="annual-function">
+            <h2>Picnic Days</h2>
+            <div class="photo-grid">
+                <!-- Add up to 20 photos here -->
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.37.50_2f50dc1f.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.21_600bbe09.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.24_619e4fa7.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.26_f0a31a56.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.28_fd898132.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.35_b4518928.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.37_697ac064.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.37_c81360af.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.38_b5a5e5de.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.38_bb84919c.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.38_fe0f48ec.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.39_9ebfcdca.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.39_b84709ec.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.39_ded69067.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.40_3a47ae39.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.40_41eae353.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.40_d0fbac07.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.41_76d58c04.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.41_a6f4571b.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.42_442ef0fe.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.42_63c87e2e.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.38.42_ed1fb691.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.39.01_444a251c.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.39.01_e2c0ac78.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.39.02_198a78e8.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.39.02_d8ffa7c1.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.40.22_39907f46.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.40.23_b1a56e27.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.41.43_51ad5fd7.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 09.04.48_9fcd17da.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 08.41.43_eb459895.jpg" class="lazy">
+                <img src="Photos/Freinds/Picnnic days/WhatsApp Image 2024-09-04 at 09.09.07_bbc532ce.jpg" class="lazy">
+                <!-- Repeat for other photos -->
+            </div>
+        </div>
+        
+        <div class="section" id="teachers-day">
+            <h2>Teachers' Day</h2>
+            <div class="photo-grid">
+                <!-- Add up to 20 photos here -->
+                <img src="Photos/Teacher's Day/WhatsApp Image 2024-09-04 at 13.26.09_9ba8768e.jpg" class="lazy">
+                <img src="Photos/Teacher's Day/WhatsApp Image 2024-09-04 at 13.26.11_379a9a4a.jpg" class="lazy">
+                <img src="Photos/Teacher's Day/WhatsApp Image 2024-09-04 at 13.26.12_54f47f8d.jpg" class="lazy">
+                <img src="Photos/Teacher's Day/WhatsApp Image 2024-09-04 at 13.29.10_614f84c9.jpg" class="lazy">
+                <img src="Photos/Teacher's Day/WhatsApp Image 2024-09-04 at 13.29.09_a21221f2.jpg" class="lazy">
+                <img src="Photos/Teacher's Day/WhatsApp Image 2024-09-04 at 13.29.10_960524e5.jpg" class="lazy">
+                <img src="Photos/Teacher's Day/WhatsApp Image 2024-09-04 at 13.29.10_d667bde5.jpg" class="lazy">
+                <img src="Photos/Teacher's Day/WhatsApp Image 2024-09-04 at 13.43.22_bc6780a9.jpg" class="lazy">
+            <!-- Repeat for other photos -->
+            </div>
+        </div>
+
+        <div class="section" id="last-day">
+            <h2>Last Day</h2>
+            <div class="photo-grid">
+                <!-- Add up to 20 photos here -->
+                <img src="Photos/Last Day/IMG-20240903-WA0008.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240903-WA0009.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240903-WA0010.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240903-WA0011.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240903-WA0015.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0061.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0062.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0063.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0064.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0065.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0066.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0067.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0068.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0069.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0070.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0071.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0072.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0074.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0075.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0076.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0077.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0078.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0079.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0080.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0081.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0082.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0083.jpg" class="lazy">
+                <img src="Photos/Last Day/IMG-20240904-WA0084.jpg" class="lazy">
+                <img src="Photos/Last Day/WhatsApp Image 2024-09-04 at 10.17.24_39b135a3.jpg" class="lazy">
+                <img src="Photos/Last Day/WhatsApp Image 2024-09-04 at 10.21.05_78a111cb.jpg" class="lazy">
+                <img src="Photos/Last Day/WhatsApp Image 2024-09-04 at 10.21.05_665f7ce2.jpg" class="lazy" >
+                <img src="Photos/Last Day/WhatsApp Image 2024-09-04 at 10.21.06_2cfdc9ce.jpg" class="lazy">
+                <!-- Repeat for other photos -->
+            </div>
+        </div>
+        
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+    </div>
+     
+    <footer>
+        <p>All rights reserved by Biplab Goswami &copy;2024</p>
+    </footer>
+
+    <script>
+        // JavaScript for Modal Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            
+            var images = document.querySelectorAll(".photo-grid img");
+            
+            images.forEach(function(img) {
+                img.onclick = function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                }
+            });
+            
+            var span = document.getElementsByClassName("close")[0];
+            
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll('img');
+
+    images.forEach(img => {
+        // Store the original src in a data attribute and remove the src attribute
+        img.dataset.src = img.src;
+        img.removeAttribute('src');
+        img.classList.add('lazy');
+    });
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    document.querySelectorAll('img.lazy').forEach(img => {
+        imageObserver.observe(img);
+    });
+});
+    </script>
+</body>
+</html>
