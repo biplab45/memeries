@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #8e2de2, #4a00e0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            backdrop-filter: blur(60px);
+        }
+
+        .contact-container {
+            background: url(Photos/—Pngtree—technology\ visualization\ futuristic\ blue\ banner_1858051.png);
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 105%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #status {
+            text-align: center;
+            margin-top: 20px;
+            color: #28a745;
+        }
+        #contact-form{
+           align-items: center;
+           padding-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+    
+        <h1>Contact Me</h1>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="status"></p>
+    </div>
+
+    <!-- Include EmailJS SDK -->
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <!-- Initialize EmailJS -->
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("nDdK7kieamyl84iiv");
+        })();
+    </script>
+
+    <!-- Custom JavaScript for form submission -->
+    <script type="text/javascript">
+        const serviceID = 'service_vyalp2s';  // Replace with your actual service ID
+        const templateID = 'template_c0axotw';  // Replace with your actual template ID
+        const autoReplyTemplateID = 'template_tt3m3ms';  // Replace with your auto-reply template ID
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const status = document.getElementById('status');
+            status.textContent = "Sending...";
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value,
+            };
+
+            // Send the email to yourself
+            emailjs.send(serviceID, templateID, formData)
+                .then(() => {
+                    // Send auto-reply email to the user
+                    emailjs.send(serviceID, autoReplyTemplateID, formData)
+                        .then(() => {
+                            status.textContent = "Message sent successfully!";
+                            document.getElementById('contact-form').reset();
+                        }, (err) => {
+                            status.textContent = "Failed to send auto-reply. Please try again.";
+                        });
+                }, (err) => {
+                    status.textContent = "Failed to send message. Please try again.";
+                });
+        });
+    </script>
+</body>
+</html>
