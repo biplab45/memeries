@@ -17,4 +17,10 @@
 ![Subir](https://github.com/user-attachments/assets/16d9b3b6-f36c-4b60-ab7e-02085ee6c796)
 ![Biplab](https://github.com/user-attachments/assets/2601964a-4038-410f-ab7b-97280a827d9b)
 ![Biplab2](https://github.com/user-attachments/assets/c55a9663-d1f8-4f4d-80c2-e425433b86a6)
+![WhatsApp Image 2024-09-04 at 13 26 09_9ba8768e](https://github.com/user-attachments/assets/7dec4600-0186-4aa0-b032-78536c19df93)
+![—Pngtree—technology visualization futuristic blue banner_1858051](https://github.com/user-attachments/assets/f7f27207-4f3b-4606-9621-32d92be2a4d6)
 -
+
+
+
+
