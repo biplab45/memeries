@@ -7,7 +7,6 @@
 ![Arup](https://github.com/user-attachments/assets/1ac5e185-c55f-4edb-b3e4-3362a2aa525b)
 ![Ayan Pal(golu)](https://github.com/user-attachments/assets/28f1c7bf-cfd1-4c4d-a1d5-acb143baedda)
 ![Ayan(tholu)](https://github.com/user-attachments/assets/887d6256-f108-4d09-9767-3d4342c908b5)
-![Biplab](https://github.com/user-attachments/assets/f551c1b9-fc6f-4742-8a06-17b3582c0b23)
 ![Manotosh](https://github.com/user-attachments/assets/7a7f6ec9-b0fd-4857-bd6d-6e8319005b78)
 ![Samir](https://github.com/user-attachments/assets/dd1f89ae-c8f0-4741-ac16-bf0d7068749c)
 ![Sandip](https://github.com/user-attachments/assets/e68a0a81-4fe6-4130-bc45-a517404e7531)
