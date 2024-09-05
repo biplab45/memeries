@@ -71,6 +71,9 @@ body {
 .profile-card img:hover {
     transform: rotate(10deg);
 }
+.facebook {
+    background: rgb(34, 34, 189);
+}
 
 footer {
     background: #222;
