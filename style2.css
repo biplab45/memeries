@@ -61,12 +61,12 @@ body {
     background: rgb(34, 34, 189);
 }
 
-.instagram:hover {
+.instagram {
     background: rgb(185, 23, 23);
 }
 
 
-.profile-card:hover {
+.profile-card {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
