@@ -110,6 +110,22 @@
             bottom: 0;
             width: 100%;
         }
+              @keyframes fadeInSlideZoom {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+.section img {
+    opacity: 0;
+    animation: fadeInSlideZoom 1.5s ease-in-out forwards;
+
+}
+
    
   
     </style>
