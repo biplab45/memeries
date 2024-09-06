@@ -134,6 +134,27 @@
     animation: fadeInSlideZoom 1.5s ease-in-out forwards;
 
 }
+        /* Lightbox image styling */
+.photo img {
+  cursor: pointer; /* Indicate that images are clickable */
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.photo img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Lightbox styling for the active image */
+.photo img.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1000; /* Make sure it’s on top of other content */
+  cursor: zoom-out; /* Indicate that clicking will close the lightbox */
+}
 
    
   
@@ -146,7 +167,7 @@
   
         <div class="section" id="saraswati-puja">
             <h2>Saraswati Puja</h2>
-            <div class="photo-grid">
+            <div class="photo-grid lightbox">
                 <!-- Add up to 20 photos here -->
                 <img src="https://github.com/user-attachments/assets/0d1007f8-4ed5-4281-8203-f74781a4fe11" class="lazy">
                 <img src="https://github.com/user-attachments/assets/102c8d12-0adf-4617-a3ca-3d43a70f21aa" class="lazy">
@@ -334,6 +355,25 @@
         imageObserver.observe(img);
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('.photo img');
+
+  images.forEach(image => {
+    image.addEventListener('click', function() {
+      // Remove 'active' class from any previously active image
+      document.querySelectorAll('.photo img.active').forEach(img => img.classList.remove('active'));
+
+      // Add 'active' class to the clicked image
+      this.classList.add('active');
+
+      // Close the lightbox effect when clicking on the image itself
+      this.addEventListener('click', function() {
+        this.classList.remove('active');
+      });
+    });
+  });
+});
+        
     </script>
 </body>
 </html>
